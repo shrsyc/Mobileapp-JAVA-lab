@@ -1,16 +1,25 @@
+package com.example.loginpage;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
     EditText email,pass;
     TextView st;
     Button b1;
     String pattern = "[a-zA-Z]+[a-zA-Z0-9_.$#*n--;&]+";
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        email = (EditText) findViewById(R.id.editTextTextEmailAddress);
-        pass = (EditText) findViewById(R.id.editTextTextPassword);
-        st = (TextView) findViewById(R.id.textView3);
+        email = (EditText) findViewById(R.id.usernameinput);
+        pass = (EditText) findViewById(R.id.passwordinput);
+        st = (TextView) findViewById(R.id.password);
         b1 = (Button) findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
